@@ -1,0 +1,11 @@
+// force timezone to UTC to allow tests to work regardless of local timezone
+// generally used by snapshots, but can affect specific tests
+process.env.TZ = 'UTC';
+
+module.exports = {
+  // Jest configuration provided by Grafana scaffolding
+  ...require('./.config/jest.config'),
+  transformIgnorePatterns: [
+    "node_modules/(?!(\\.pnpm|d3|d3-array|d3-axis|d3-brush|d3-chord|d3-color|d3-contour|d3-delaunay|d3-dispatch|d3-drag|d3-dsv|d3-ease|d3-fetch|d3-force|d3-format|d3-geo|d3-hierarchy|d3-interpolate|d3-path|d3-polygon|d3-quadtree|d3-random|d3-scale|d3-scale-chromatic|d3-selection|d3-shape|d3-time|d3-time-format|d3-timer|d3-transition|d3-zoom|delaunator|internmap|robust-predicates|jira.js|@grafana/ui|@grafana/data|@grafana/runtime|marked|react-calendar|get-user-locale|memoize|mimic-function)/)"
+  ],
+};

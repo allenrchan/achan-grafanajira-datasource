@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "datasource",
+    "name": "Grafana Jira Datasource",
+  "id": "achan-grafanajira-datasource",
+  "backend": true,
+  "executable": "gpx_grafana_jira_datasource",
+  "metrics": true,
+  "info": {
+    "description": "Grafana datasource plugin for JIRA",
+    "author": {
+      "name": "Grafana Labs"
+    },
+    "keywords": ["datasource"],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+  "dependencies": {
+    "grafanaDependency": ">=10.0.0",
+    "plugins": []
+  },
+  "logs": true,
+  "routes": [],
+  "includes": [
+    {
+      "type": "dashboard",
+      "path": "dashboards/overview.json"
+    }
+  ]
+}

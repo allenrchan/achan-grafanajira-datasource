@@ -1,0 +1,15 @@
+apiVersion: 1
+
+datasources:
+  - name: 'achan-grafanajira-datasource'
+    type: 'achan-grafanajira-datasource'
+    access: proxy
+    isDefault: false
+    orgId: 1
+    version: 1
+    editable: true
+    jsonData:
+      url: 'https://test.atlassian.net'
+      username: 'user@example.com'
+    secureJsonData:
+      token: 'test-token'
