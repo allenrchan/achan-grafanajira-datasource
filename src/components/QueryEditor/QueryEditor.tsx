@@ -3,7 +3,7 @@ import {InlineField, Input, Select} from '@grafana/ui';
 import {QueryEditorProps, SelectableValue} from '@grafana/data';
 import {DataSource} from '../../datasource';
 import {MyDataSourceOptions, JiraQuery, METRICS} from '../../types';
-import {AsyncQueryTypeState, useMetricTypes} from "./useQueryTypes";
+import {useMetricTypes} from "./useQueryTypes";
 
 type Props = QueryEditorProps<DataSource, JiraQuery, MyDataSourceOptions>;
 type StatusSelectProps = {datasource: DataSource, query: JiraQuery, onChange: (value: JiraQuery) => void}

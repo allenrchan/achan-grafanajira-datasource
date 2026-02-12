@@ -1,5 +1,5 @@
 import React, {ChangeEvent} from 'react';
-import {Button, InlineField, Input, SecretInput} from '@grafana/ui';
+import {InlineField, Input, SecretInput} from '@grafana/ui';
 import { DataSourcePluginOptionsEditorProps } from '@grafana/data';
 import { MyDataSourceOptions, MySecureJsonData } from '../types';
 

@@ -1,9 +1,8 @@
 import { useAsync } from 'react-use';
 import type { SelectableValue } from '@grafana/data';
 import {DataSource} from "../../datasource";
-import {JiraQuery} from "../../types";
 
-type AsyncQueryTypeState = {
+export type AsyncQueryTypeState = {
   loading: boolean;
   queryTypes: Array<SelectableValue<string>>;
   error: Error | undefined;

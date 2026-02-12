@@ -1,11 +1,10 @@
 import {
     DataSourceInstanceSettings,
-    SelectableValue,
     ScopedVars,
 } from '@grafana/data';
 import { DataSourceWithBackend, getTemplateSrv } from '@grafana/runtime';
 
-import { JiraQuery, MyDataSourceOptions, DEFAULT_QUERY, METRICS, QueryTypesResponse, StatusTypesResponse } from './types';
+import { JiraQuery, MyDataSourceOptions, DEFAULT_QUERY, METRICS, QueryTypesResponse } from './types';
 
 export class DataSource extends DataSourceWithBackend<JiraQuery, MyDataSourceOptions> {
     constructor(instanceSettings: DataSourceInstanceSettings<MyDataSourceOptions>) {
@@ -16,7 +15,7 @@ export class DataSource extends DataSourceWithBackend<JiraQuery, MyDataSourceOpt
         return DEFAULT_QUERY;
     }
 
-    applyTemplateVariables(query: JiraQuery, scopedVars: ScopedVars): Record<string, any> {
+    applyTemplateVariables(query: JiraQuery, scopedVars: ScopedVars): JiraQuery {
         return {
             ...query,
             jqlQuery: getTemplateSrv().replace(query.jqlQuery, scopedVars),
